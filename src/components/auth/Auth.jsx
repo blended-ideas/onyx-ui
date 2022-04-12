@@ -1,15 +1,13 @@
 import React from 'react';
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
-const Auth = () => {
-    return (
-        <>
-            <header>
-                Auth Base
-            </header>
-            <Outlet />
-        </>
-    );
-};
+function Auth() {
+  return (
+    <>
+      <header>Auth Base</header>
+      <Outlet />
+    </>
+  );
+}
 
 export default Auth;
