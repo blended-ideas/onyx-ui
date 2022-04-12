@@ -1,13 +1,18 @@
-import { useState } from 'react';
+import Button from './components/UI/Button';
+import { Routes, Route } from 'react-router-dom';
+import Auth from './components/auth/Auth';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      Onyx UI
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Button> Home </Button>} />
+      <Route path="auth" element={<Auth />}>
+        <Route path='login' element={<Button>Login</Button>} />
+        <Route path='signup' element={<Button>Signup</Button>} />
+      </Route>
+      <Route path="*" element={<h1>No Match</h1>} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
